@@ -1,0 +1,14 @@
+<div class="flex">
+  <div class="item-flex">
+    <div class="jumbotron">
+        <h1 class="title" style="color:rgb(12, 12, 53);">Entrar</h1>
+      <input _ngcontent-c1="" placeholder="Login" [(ngModel)]="email"  type="text" style="width: 60%;">
+      <input _ngcontent-c1="" placeholder="Senha" [(ngModel)]= "password" type="password" style="width: 60%;">
+    <br>
+    <button type="button" class="btn btn-danger" (click)="loginUser()">Login</button>
+    <button type="button" class="btn btn-danger">Cadastro</button>
+    <p>{{email}}</p>
+    <p>{{password}}</p>
+    </div>
+  </div>
+</div>
