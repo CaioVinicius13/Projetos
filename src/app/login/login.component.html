@@ -1,14 +1,12 @@
 <div class="flex">
   <div class="item-flex">
     <div class="jumbotron">
-        <h1 class="title" style="color:rgb(12, 12, 53);">Entrar</h1>
-      <input _ngcontent-c1="" placeholder="Login" [(ngModel)]="email"  type="text" style="width: 60%;">
-      <input _ngcontent-c1="" placeholder="Senha" [(ngModel)]= "password" type="password" style="width: 60%;">
-    <br>
-    <button type="button" class="btn btn-danger" (click)="loginUser()">Login</button>
-    <button type="button" class="btn btn-danger">Cadastro</button>
-    <p>{{email}}</p>
-    <p>{{password}}</p>
+        <h1 class="title" style="color:blue;">L O G I N</h1>
+      <input _ngcontent-c1="" placeholder="Email" [(ngModel)]="email" type="text" style="width: 100%;">
+      <input _ngcontent-c1="" placeholder="Senha" [(ngModel)]= "password" type="password" style="width: 100%;"><br>
+    <button type="button" class="btn btn-blue" (click)="loginUser()">Entrar</button>
+      <h1 style="width: 40%"></h1>
+      <a href="#" class="link">Cadastre-se</a>
     </div>
   </div>
 </div>
