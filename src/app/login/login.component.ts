@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../models/user.model';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,20 +10,30 @@ import { User } from '../models/user.model';
 })
 export class LoginComponent implements OnInit {
 
-  newUser: User;
-  email: string;
-  password: string;
+  newUser: User = new User();
+  
 
-  constructor() { }
+  constructor(private auth : AuthService, private route : Router) { }
 
   loginUser() {
-    this.newUser = new User()
-    this.newUser.email = this.email;
-    this.newUser.password = this.password;
-    console.log(this.newUser.email);
-    console.log(this.newUser.password);
-    //manda pro service fazer a conexão com o back
+    if(this.newUser.email === '' && this.newUser.password === ''){
+    alert('Login e senha Invalidos')
+    
+    }else{
+      this.validateUser()
+
+    }
   }
+    validateUser(){
+      if(this.auth.isValid(this.newUser)){
+        this.route.navigate(['home']) 
+      }else{
+        alert('Login e senha Invalidos')
+      }
+  }
+      
+    //manda pro service fazer a conexão com o back
+  
 
   ngOnInit() {
   }
