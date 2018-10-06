@@ -20,12 +20,14 @@ export class LoginComponent implements OnInit {
     alert('Login e senha Invalidos')
     
     }else{
+      console.log('Passou do primeiro if!')
       this.validateUser()
 
     }
   }
     validateUser(){
       if(this.auth.isValid(this.newUser)){
+        console.log('é true!')
         this.route.navigate(['home']) 
       }else{
         alert('Login e senha Invalidos')

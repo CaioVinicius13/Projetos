@@ -8,6 +8,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { HomeComponent } from './home/home.component'; 
 import { RouterModule } from '@angular/router';
 import { routes } from './routes';
+import { AuthService } from './auth.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,7 @@ import { routes } from './routes';
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
